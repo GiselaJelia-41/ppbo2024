@@ -1,48 +1,85 @@
 <?php
+
 class Lingkaran
 {
     const PHI = 3.14;
+    public $jari_jari;
 
-
-    public function luas($jari_jari) : float {
-        return self::PHI*$jari_jari*$jari_jari;
+    public function __construct($jari_jari) {
+        $this->jari_jari = $jari_jari;
     }
 
+    public function luas() : float {
+        return self::PHI*$this->jari_jari*$this->jari_jari;
+    }
 
-    public function keliling($jari_jari) : float {
-        return 2*self::PHI*$jari_jari;
+    public function keliling() : float {
+        return 2*self::PHI*$this->jari_jari;
     }
 }
 
 
 class Bola
 {
+    public $jari_jari;
     const PHI = 3.14;
-    public function volume($jari_jari) : float {
-        return (4/3)*self::PHI*pow($jari_jari,3);
+
+    public function __construct($jari_jari) {
+        $this->jari_jari=$jari_jari;
+    }
+
+    public function volume() : float {
+        return (4/3)*self::PHI*pow($this->jari_jari,3);
     }
 }
 
 
 class Tabung
 {
+    public $jari_jari;
+    public $tinggi;
+
+    public function __construct($jari_jari,$tinggi) {
+        $this->jari_jari = $jari_jari;
+        $this->tinggi =$tinggi;
+    }
+    
     const PHI = 3.14;
-    public function volume($jari_jari,$tinggi) : float {
-        return self::PHI*pow($jari_jari,2)*$tinggi;
+    public function volume() : float {
+        return self::PHI*pow($this->jari_jari,2)*$this->tinggi;
     }
 }
 
 
 class Kerucut
 {
+    public $jari_jari;
+    public $tinggi;
     const PHI = 3.14;
-    public function volume($jari_jari,$tinggi) : float {
-        return (1/3)*self::PHI*pow($jari_jari,2)*$tinggi;
+
+    public function __construct($jari_jari,$tinggi) {
+        $this->jari_jari = $jari_jari;
+        $this->tinggi =$tinggi;
+    }
+   
+    public function volume() : float {
+        return (1/3)*self::PHI*pow($this->jari_jari,2)*$this->tinggi;
     }
 }
 
-$nasi_tumpeng = new Kerucut();
-$jari_jari = 4; 
-$tinggi = 10; 
-$volume = $nasi_tumpeng->volume($jari_jari, $tinggi);
-echo "Volume kerucut nasi tumpeng adalah {$volume}";
+$nasi_tumpeng = new Lingkaran(4);
+echo "Luas nasi tumpeng adalah {$nasi_tumpeng->luas()}"."\n";
+echo "Kelilingnya adalah {$nasi_tumpeng ->Keliling()}"."\n";
+echo "\n";
+
+$bola_kasus = new Bola(7);
+echo "Volume bola adalah {$bola_kasus->volume()}"."\n";
+echo "\n";
+
+$tabung_kasus= new Tabung(4,10);
+echo "Volume tabung adalah {$tabung_kasus->volume()}"."\n";
+echo "\n";
+
+$kerucut_kasus= new Kerucut(7,8);
+echo "Volume kerucut adalah {$kerucut_kasus->volume()}"."\n";
+echo "\n";
