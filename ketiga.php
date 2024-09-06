@@ -1,5 +1,6 @@
 <?php
 
+
 class Lingkaran
 {
     const PHI = 3.14;
@@ -70,16 +71,12 @@ class Kerucut
 $nasi_tumpeng = new Lingkaran(4);
 echo "Luas nasi tumpeng adalah {$nasi_tumpeng->luas()}"."\n";
 echo "Kelilingnya adalah {$nasi_tumpeng ->Keliling()}"."\n";
-echo "\n";
 
-$bola_kasus = new Bola(7);
+$bola_kasus = new Bola(8);
 echo "Volume bola adalah {$bola_kasus->volume()}"."\n";
-echo "\n";
 
 $tabung_kasus= new Tabung(4,10);
 echo "Volume tabung adalah {$tabung_kasus->volume()}"."\n";
-echo "\n";
 
-$kerucut_kasus= new Kerucut(7,8);
+$kerucut_kasus= new Kerucut(9,10);
 echo "Volume kerucut adalah {$kerucut_kasus->volume()}"."\n";
-echo "\n";
