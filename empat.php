@@ -1,65 +1,8 @@
 <?php
 
-
-class Author
-{
-    public $name;
-    public $description;
-
-    public function show(string $type) : array
-    {
-        if ($type === 'Info Buku') {
-            return [
-                'name' => $this->name,
-                'description' => $this->description
-            ];
-        }
-        return [];
-    }
-}
-
-class Book
-{
-    public $ISBN;
-    public $title;
-    public $description;
-    public $category;
-    public $language;
-    public $numberOfPage;
-    public $author;
-    public $publisher;
-
-    public function showAll() : array
-    {
-        return [
-            'ISBN' => $this->ISBN,
-            'Title' => $this->title,
-            'Description' => $this->description,
-            'Category' => $this->category,
-            'Language' => $this->language,
-            'Number of Page' => $this->numberOfPage,
-            'Author' => $this->author,
-            'Publisher' => $this->publisher
-        ];
-    }
-}
-
-class Publisher
-{
-    public $name;
-    public $address;
-    private $phone;
-
-    public function setPhone(int $phone) : void
-    {
-        $this->phone = $phone;
-    }
-
-    public function getPhone() : int
-    {
-        return $this->phone;
-    }
-}
+require_once 'Author.php';
+require_once 'Book.php';
+require_once 'Publisher.php';
 
 $author = new Author();
 $author->name = "Tere Liye";
