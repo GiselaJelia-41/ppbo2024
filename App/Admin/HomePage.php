@@ -6,4 +6,3 @@ class HomePage
         echo "Halaman depan admin";
     }
 }
-
