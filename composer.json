@@ -1,0 +1,12 @@
+{
+    "name": "giselajelia-41/ppbo2024",
+    "description": "Merupakan package untuk latihan pemrograman berorientasi objek",
+    "type": "project",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4":{
+            "App\\":"App"
+        }
+    }
+}
